@@ -1,4 +1,4 @@
-- name: vertx-k8-workshop-apb playbook to provision the application
+- name: quarkus-workshop-apb playbook to provision the infrastructure
   hosts: localhost
   gather_facts: false
   connection: local
