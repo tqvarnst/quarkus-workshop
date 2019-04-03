@@ -29,12 +29,25 @@ Then continue as follows:
 
 If you are using Minishift locally, you may want to use only `che_generate_user_count=1` (instead of `10`).
 
-then follow the logs:
+Then follow the logs:
 
     oc logs apb -f
 
-To start over from scratch, the easiest is to delete the project and re-create a new one before running the APB again:
+until they print something like this:
+
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=38   changed=18   unreachable=0    failed=0
+
+If there are failures, and you need to start over from scratch, the easiest is to delete the project and re-create a new one before running the APB again:
 
     oc delete project labs-infra
     oc new-project labs-infra
     oc run apb ...
+
+## Using Che
+
+_TODO This chapter will later move into a "real" Guide instead of being here..._
+
+Find the URL of _Che_ e.g. via `oc get route che` and login as `user1` with `password`.
+
+...
