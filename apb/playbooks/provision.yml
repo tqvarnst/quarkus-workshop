@@ -1,4 +1,4 @@
-- name: vertx-k8-workshop-apb playbook to provision the application
+- name: quarkus-openshift-workshop-apb playbook to provision the application
   hosts: localhost
   gather_facts: false
   connection: local
@@ -176,7 +176,7 @@
       install_custom_stacks_json: |
         [{
           "name": "Quarkus Development",
-          "description": "Java JDK Stack on CentOS for Vertx-Workshop",
+          "description": "Java JDK Stack on CentOS for https://Quarkus.io Workshop",
           "scope": "general",
           "workspaceConfig": {
             "environments": {

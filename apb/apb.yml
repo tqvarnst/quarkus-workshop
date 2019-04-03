@@ -1,19 +1,19 @@
 version: 1.0
-name: Vertx-workshop
-description: APB to deploy required infra components for the v2 version of Vertx-Workshop on an OpenShift cluster
+name: Quarkus-workshop
+description: APB to deploy required infra components for the Quarkus Workshop on an OpenShift cluster
 bindable: False
 async: optional
 tags:
 - workshop
 metadata:
   dependencies: []
-  displayName: "Vertx-Workshop Installer"
-  longDescription: "Installs the lab instructions and required components (Git server, Nexus, Eclipse Che, etc) for running the Vertx-Workshop https://github.com/RedHat-Middleware-Workshops/cloud-native-workshop-v2-guides"
+  displayName: "Quarkus Workshop Installer"
+  longDescription: "Installs the lab instructions and required components (Git server, Nexus, Eclipse Che, etc) for running the Quarkus Workshop https://github.com/RedHat-Middleware-Workshops/cloud-native-workshop-v2-guides"
   console.openshift.io/iconClass: "pficon pficon-process-automation"
   providerDisplayName: "Red Hat, Inc."
 plans:
   - name: default
-    description: Deploys Vertx-Workshop v2 Infrastructure
+    description: Deploys Quarkus Workshop Infrastructure
     free: True
     metadata:
       displayName: Default
@@ -71,4 +71,4 @@ plans:
       display_type: text
       display_group: Workshop Infra Services
 
-      
+
