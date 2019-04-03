@@ -176,14 +176,14 @@
       install_custom_stacks_json: |
         [{
           "name": "Quarkus Development",
-          "description": "Java JDK Stack on CentOS for https://Quarkus.io Workshop",
+          "description": "Java JDK Stack on CentOS for quarkus.io Workshop",
           "scope": "general",
           "workspaceConfig": {
             "environments": {
               "default": {
                 "recipe": {
                   "type": "dockerimage",
-                  "content": "siamaksade/che-centos-jdk8"
+                  "content": "quay.io/tqvarnst/che-quarkus:0.12.0"
                 },
                 "machines": {
                   "dev-machine": {
@@ -227,16 +227,16 @@
             },
             "commands": [
               {
-                "commandLine": "mvn compile quarkus:dev -f ${current.project.path}",
+                "commandLine": "/opt/apache-maven-3.6.0/bin/mvn -f ${current.project.path}/pom.xml compile quarkus:dev",
                 "name": "Run in dev mode",
                 "type": "mvn",
                 "attributes": {
                   "goal": "Run",
-                  "previewUrl": ""
+                  "previewUrl": "${server.8080/tcp}/hello/greeting/Quarkus"
                 }
               },
               {
-                "commandLine": "mvn clean package -f ${current.project.path}",
+                "commandLine": "/opt/apache-maven-3.6.0/bin/mvn -f ${current.project.path}/pom.xml",
                 "name": "clean build",
                 "type": "mvn",
                 "attributes": {
@@ -245,7 +245,7 @@
                 }
               },
               {
-                "commandLine": "mvn verify -f ${current.project.path}",
+                "commandLine": "/opt/apache-maven-3.6.0/bin/mvn  verify -f ${current.project.path}/pom.xml",
                 "name": "test",
                 "type": "mvn",
                 "attributes": {
@@ -286,6 +286,6 @@
             "CentOS",
             "Git"
           ],
-          "id": "java-oc-centos-quarkus"
+          "id": "che-quarkus"
         }]
     tags: eclipse-che
