@@ -25,7 +25,7 @@ Then continue as follows:
                -- provision -vvv \
                -e namespace="$(oc project -q)"  \
                -e openshift_token=$(oc whoami -t) \
-               -e che_generate_user_count=10
+               -e che_generate_user_count=50
 
 If you are using Minishift locally, you may want to use only `che_generate_user_count=1` (instead of `10`).
 

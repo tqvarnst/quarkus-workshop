@@ -1,0 +1,22 @@
+id: "quarkus-workshop"
+name: "Quarkus Workshop 2019"
+
+content:
+  url: https://raw.githubusercontent.com/RedHat-Middleware-Workshops/cloud-native-workshop-v2-guides.git/master
+
+vars:
+  OPENSHIFT_DOCS_BASE: "https://docs.openshift.com/container-platform/3.11"
+  OPENSHIFT_CONSOLE_URL: "https://master.kista-f7cc.openshiftworkshop.com"
+  OPENSHIFT_USER: "userX"
+  OPENSHIFT_PASSWORD: "password"
+  OPENSHIFT_PROJECT_NAME: "quarkus-workshop-userX"
+  ECLIPSE_CHE_URL: "http://che-quarkus-workshop-infra.apps.kista-f7cc.openshiftworkshop.com/"
+  ECLIPSE_CHE_USER: "userX"
+  ECLIPSE_CHE_PASSWORD: "password"
+  QUARKUS_QUICKSTART_REPO: "https://github.com/quarkusio/quarkus-quickstarts.git"
+  QUARKUS_QUICKSTART_BRANCH: "0.12.0"
+
+  
+modules:
+  activate:
+  - getting-started-che
