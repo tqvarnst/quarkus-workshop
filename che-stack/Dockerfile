@@ -23,6 +23,7 @@ RUN cat /etc/group | \
 
 ENV HOME /home/user
 ENV M2_HOME=/opt/apache-maven-3.6.0
+ENV GRAALVM_HOME=/opt/graalvm-ce-1.0.0-rc14
 
 COPY ["./download-maven-deps.sh", "/tmp/maven-deps/"]
 RUN sudo chown user:user /tmp/maven-deps /tmp/maven-deps/* && \
