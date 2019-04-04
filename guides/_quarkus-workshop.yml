@@ -13,10 +13,15 @@ vars:
   ECLIPSE_CHE_URL: "http://che-quarkus-workshop-infra.apps.kista-f7cc.openshiftworkshop.com/"
   ECLIPSE_CHE_USER: "userX"
   ECLIPSE_CHE_PASSWORD: "password"
-  QUARKUS_QUICKSTART_REPO: "https://github.com/quarkusio/quarkus-quickstarts.git"
-  QUARKUS_QUICKSTART_BRANCH: "0.12.0"
+  quarkus-version: "0.12.0"
+  quickstarts-clone-url: "https://github.com/quarkusio/quarkus-quickstarts.git"
+  quickstarts-archive-url: "https://github.com/quarkusio/quarkus-quickstarts/archive/0.12.0.zip"
+  project-name: Quarkus
 
   
 modules:
   activate:
   - getting-started-che
+  - getting-started-guide
+  - getting-started-testing
+  - application-configuration-guide
