@@ -16,8 +16,11 @@ install:
 
 script:
   - cd apb && docker build -t tqvarnst/quarkus-workshop-apb:$TRAVIS_COMMIT .
+  - cd che-stack && docker build -t tqvarnst/che-quarkus:$TRAVIS_COMMIT .
 
 after_success:
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
   - docker tag tqvarnst/quarkus-workshop-apb:$TRAVIS_COMMIT quay.io/tqvarnst/quarkus-workshop-apb:$TAG
   - docker push quay.io/tqvarnst/quarkus-workshop-apb:$TAG
+  - docker tag tqvarnst/che-quarkus:$TRAVIS_COMMIT quay.io/tqvarnst/che-quarkus:$TAG
+  - docker push quay.io/tqvarnst/che-quarkus:$TAG
