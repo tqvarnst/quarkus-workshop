@@ -15,8 +15,10 @@ install:
   - ansible-playbook apb/playbooks/provision.yml --syntax-check
 
 script:
-  - cd apb && docker build -t tqvarnst/quarkus-workshop-apb:$TRAVIS_COMMIT .
-  - cd che-stack && docker build -t tqvarnst/che-quarkus:$TRAVIS_COMMIT .
+  - pushd apb && docker build -t tqvarnst/quarkus-workshop-apb:$TRAVIS_COMMIT .
+  - popd
+  - pushd che-stack && docker build -t tqvarnst/che-quarkus:$TRAVIS_COMMIT .
+  - popd
 
 after_success:
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
