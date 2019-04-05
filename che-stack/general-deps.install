@@ -31,6 +31,8 @@ sudo yum update -y -d 1 \
     java-${JAVA_VERSION}-openjdk-devel \
     tar \
     wget \
+    glibc-devel \
+    zlib-devel \
   && sudo wget -qO- "https://mirror.openshift.com/pub/openshift-v3/clients/${OC_VERSION}/linux/oc.tar.gz" \
     | sudo tar xvz -C /usr/local/bin \
   && sudo wget -qO- "http://mirrors.ibiblio.org/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz" \
